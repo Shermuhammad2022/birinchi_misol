@@ -8,11 +8,11 @@ class Words {
         "Satr bo'sh bo'lmasligi kerak!"
       );
     } else
-    if(RegExp(r"[a-z]").hasMatch(word)){
-      throw FormatException(
-        "Satr faqat lotin kichik harflaridan iborat bo'lsin!"
-      );
-    }
+    // if(RegExp(r"[A-Z]").hasMatch(word)){
+    //   throw FormatException(
+    //     "Satr faqat lotin kichik harflaridan iborat bo'lsin!"
+    //   );
+    // }
     return Words(word: word);
   }
 
@@ -22,6 +22,7 @@ class Words {
       _word = w;
     }
   }
+
   String get word => _word;
 
   @override
@@ -34,7 +35,6 @@ class Words {
       word: word ?? this.word,
     );
   }
-  
   
   @override
   int get hashCode => Object.hashAll({word});
